@@ -31,10 +31,11 @@ jobs:
 
       - name: Build, tag, and push image
         run: |
-          docker build -t automated-containerized-app-repo:latest .
+          docker build -t automated-containerized-app-repo:latest -f docker/Dockerfile .
           docker tag automated-containerized-app-repo:latest \
           872018224876.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
-          docker push 872018224876.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
+          docker push \
+            872018224876.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
 
       - name: Deploy to ECS
         run: |
