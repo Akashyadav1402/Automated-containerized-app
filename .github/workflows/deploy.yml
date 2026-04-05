@@ -35,7 +35,7 @@ jobs:
           docker tag automated-containerized-app-repo:latest \
           264914792039.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
           docker push \
-            872018224876.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
+            264914792039.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
 
       - name: Deploy to ECS
         run: |
