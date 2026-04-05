@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Automated Containerized Web App running on AWS ECS"
+    return "Automated Containerized Web App running"
 
 @app.route("/health")
 def health():
