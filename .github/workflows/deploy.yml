@@ -37,11 +37,11 @@ jobs:
           docker push \
             264914792039.dkr.ecr.ap-south-1.amazonaws.com/automated-containerized-app-repo:latest
 
-      - name: Deploy to ECS
-        run: |
-          aws ecs update-service \
-            --cluster $ECS_CLUSTER \
-            --service $ECS_SERVICE \
-            --force-new-deployment
+      #- name: Deploy to ECS
+       # run: |
+          #aws ecs update-service \
+            #--cluster $ECS_CLUSTER \
+            #--service $ECS_SERVICE \
+            #--force-new-deployment
 
 
